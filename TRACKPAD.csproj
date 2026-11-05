@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>TRACKPAD</AssemblyName>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="server.pfx" />
+    <EmbeddedResource Include="ca.crt" />
+    <EmbeddedResource Include="app.ico" />        <!-- YENİ -->
+    <EmbeddedResource Include="icon-192.png" />   <!-- YENİ -->
+    <EmbeddedResource Include="icon-512.png" />   <!-- YENİ -->
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+bin/
+obj/
+publish/
+*.pfx
+ca.crt
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
