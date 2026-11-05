@@ -2,11 +2,22 @@
 
 Wireless trackpad for Windows using your Android tablet over local WiFi.
 
+## Requirements
+
+- Windows 10/11 (64-bit)
+- [.NET 9 SDK](https://dotnet.microsoft.com/download) installed
+- Android 7+ tablet or phone with Chrome
+- Both devices on the same WiFi network
+  
 ## Install (PC)
 
-1. Download `TRACKPAD.exe` from [Releases](../../releases).
-2. Double-click it. A window shows an address like `https://...`.
-3. Leave it running in the system tray. Closing the window doesn't stop the server.
+```
+git clone https://github.com/ismailoksuz/trackpad.git
+cd trackpad
+dotnet run
+```
+A window shows an address like `https://...`. Leave it running.
+
 
 ## Install (Android tablet)
 
@@ -23,4 +34,10 @@ Wireless trackpad for Windows using your Android tablet over local WiFi.
 2. Chrome menu → **Install app**.
 3. An icon appears on your home screen. Tap it to launch full-screen.
 
-Done. Next time, just tap the home-screen icon.
+## Optional: build a standalone EXE
+
+If you don't want to install .NET on the target PC, build a single-file, self-contained EXE:
+```
+dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
+```
+Output: `bin\Release\net9.0-windows\win-x64\publish\TRACKPAD.exe`
